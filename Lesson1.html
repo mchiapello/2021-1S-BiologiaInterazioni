@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Microbiota</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Marco Chiapello" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/font-awesome-animation/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="libs/fontawesome/js/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="scrollable.css" type="text/css" />
+    <link rel="stylesheet" href="mtheme_max.css" type="text/css" />
+    <link rel="stylesheet" href="fonts_mtheme_max.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: title-slide
+
+
+
+# .font170[MICROBIOMA E MICROBIOTA]
+
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.marco[
+Marco Chiapello
+&lt;br&gt;
+2021-10-06
+]
+
+
+.marco[
+.center[.font90[[[<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3upNjCt) - <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
+]
+]
+
+???
+
+.n30[
+
+- Sarò uno dei vostri docenti per il corso "Interazioni tra piante, microrganismi e ambiente"
+]
+---
+layout: true
+class: clear
+
+---
+
+.font180[.bold[About the teacher <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:black;overflow:visible;position:relative;"><path d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"/></svg>]]
+
+.pull-left[
+
+- Marco Chiapello, PhD
+
+- Plant Biologist <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#25403B;overflow:visible;position:relative;"><path d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2 27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z"/></svg>
+
+- Bioinformatician <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:black;overflow:visible;position:relative;"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg>
+
+- R addicted <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:black;overflow:visible;position:relative;"><path d="M285.363 207.475c0 18.6-9.831 28.431-28.431 28.431h-29.876v-56.14h23.378c28.668 0 34.929 8.773 34.929 27.709zM504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM363.411 360.414c-46.729-84.825-43.299-78.636-44.702-80.98 23.432-15.172 37.945-42.979 37.945-74.486 0-54.244-31.5-89.252-105.498-89.252h-70.667c-13.255 0-24 10.745-24 24V372c0 13.255 10.745 24 24 24h22.567c13.255 0 24-10.745 24-24v-71.663h25.556l44.129 82.937a24.001 24.001 0 0 0 21.188 12.727h24.464c18.261-.001 29.829-19.591 21.018-35.587z"/></svg>
+
+- Deeply in love with teaching <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:black;overflow:visible;position:relative;"><path d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"/></svg>
+]
+
+
+---
+
+.font180[.bold[General Introduction <svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:black;overflow:visible;position:relative;"><path d="M225.38 233.37c-12.5 12.5-12.5 32.76 0 45.25 12.49 12.5 32.76 12.5 45.25 0 12.5-12.5 12.5-32.76 0-45.25-12.5-12.49-32.76-12.49-45.25 0zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm126.14 148.05L308.17 300.4a31.938 31.938 0 0 1-15.77 15.77l-144.34 65.97c-16.65 7.61-33.81-9.55-26.2-26.2l65.98-144.35a31.938 31.938 0 0 1 15.77-15.77l144.34-65.97c16.65-7.6 33.8 9.55 26.19 26.2z"/></svg>]]
+
+- .font120[Learning] 
+
+- .font120[Concept maps]
+
+- .font120[Feedbacks]
+
+- .font120[Silly questions]
+
+
+???
+
+.n30[
+- Learning: L'apprendimento non e' qualcosa che si fa agli studenti, l'apprendimento e' un processo e non un prodotto
+
+- Concept maps: in questo corso proveremo ad utilizzare le concept maps come strumento di apprendimento. Vi verrà quindi chiesto di schematizzare i concetti appresi tramite mappe concettuali per riuscire a fissare i contenuti
+
+- Feedback: E' studiato e risaputo che l'atmosfera sociale, emotova ed intellettuale della classe influenzi l'apprendimento. Quindi interagiamo =&gt; sono disponibile a rispondere e chiarire ogni dubbio sia in classe che fuori (Slack). Vi chiederò anche dei feedback sulle lezioni per capire se stiamo andando nella giusta direzione. 
+
+- Silly questions: esistono, ma non e' stupido chi le fa! Mi permettono di capire se devo approfondire qualche concetto
+]
+
+---
+
+
+.font180[.bold[Course overview - Lecture]]
+
+- .font120[Plant Microbiota <svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:green;overflow:visible;position:relative;"><path d="M378.31 378.49L298.42 288h30.63c9.01 0 16.98-5 20.78-13.06 3.8-8.04 2.55-17.26-3.28-24.05L268.42 160h28.89c9.1 0 17.3-5.35 20.86-13.61 3.52-8.13 1.86-17.59-4.24-24.08L203.66 4.83c-6.03-6.45-17.28-6.45-23.32 0L70.06 122.31c-6.1 6.49-7.75 15.95-4.24 24.08C69.38 154.65 77.59 160 86.69 160h28.89l-78.14 90.91c-5.81 6.78-7.06 15.99-3.27 24.04C37.97 283 45.93 288 54.95 288h30.63L5.69 378.49c-6 6.79-7.36 16.09-3.56 24.26 3.75 8.05 12 13.25 21.01 13.25H160v24.45l-30.29 48.4c-5.32 10.64 2.42 23.16 14.31 23.16h95.96c11.89 0 19.63-12.52 14.31-23.16L224 440.45V416h136.86c9.01 0 17.26-5.2 21.01-13.25 3.8-8.17 2.44-17.47-3.56-24.26z"/></svg>] 
+
+- .font120[Ecological Significance of Viruses <span class=" faa-flash animated-hover " style=" display: -moz-inline-stack; display: inline-block; transform: rotate(0deg);">&lt;img src="images/virus-3128.png" style="height:1em; width:auto; "/&gt;</span>]
+
+- .font120[Elements of Bioinformatics <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:grey;overflow:visible;position:relative;"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg>]
+
+---
+
+
+.font180[.bold[Course overview - Practical]]
+
+- .font120[Wet lab: How to perform a PCR <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:grey;overflow:visible;position:relative;"><path d="M.1 494.1c-1.1 9.5 6.3 17.8 15.9 17.8l32.3.1c8.1 0 14.9-5.9 16-13.9.7-4.9 1.8-11.1 3.4-18.1H380c1.6 6.9 2.9 13.2 3.5 18.1 1.1 8 7.9 14 16 13.9l32.3-.1c9.6 0 17.1-8.3 15.9-17.8-4.6-37.9-25.6-129-118.9-207.7-17.6 12.4-37.1 24.2-58.5 35.4 6.2 4.6 11.4 9.4 17 14.2H159.7c21.3-18.1 47-35.6 78.7-51.4C410.5 199.1 442.1 65.8 447.9 17.9 449 8.4 441.6.1 432 .1L399.6 0c-8.1 0-14.9 5.9-16 13.9-.7 4.9-1.8 11.1-3.4 18.1H67.8c-1.6-7-2.7-13.1-3.4-18.1-1.1-8-7.9-14-16-13.9L16.1.1C6.5.1-1 8.4.1 17.9 5.3 60.8 31.4 171.8 160 256 31.5 340.2 5.3 451.2.1 494.1zM224 219.6c-25.1-13.7-46.4-28.4-64.3-43.6h128.5c-17.8 15.2-39.1 30-64.2 43.6zM355.1 96c-5.8 10.4-12.8 21.1-21 32H114c-8.3-10.9-15.3-21.6-21-32h262.1zM92.9 416c5.8-10.4 12.8-21.1 21-32h219.4c8.3 10.9 15.4 21.6 21.2 32H92.9z"/></svg> ]
+ 
+- .font120[Dry lab: How to perform alignments/blast/phylogenetic trees <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:grey;overflow:visible;position:relative;"><path d="M432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"/></svg> ]
+
+- .font120[Dry lab: How to perform microbiota analysis <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:grey;overflow:visible;position:relative;"><path d="M272.35,226.4A17.71,17.71,0,0,0,281.46,203l-4-9.08a121.29,121.29,0,0,1,12.36-3.08A83.34,83.34,0,0,0,323.57,177l10,9a17.76,17.76,0,1,0,23.92-26.27l-9.72-8.76a83.12,83.12,0,0,0,11.65-48.18l11.85-3.51a17.73,17.73,0,1,0-10.15-34l-11.34,3.36a84,84,0,0,0-36.38-35.57l2.84-10.85a17.8,17.8,0,0,0-34.47-8.93l-2.82,10.78a83.25,83.25,0,0,0-16.74,1.1C250.83,27,240,30.22,229.1,33.39l-3.38-9.46a17.8,17.8,0,0,0-33.56,11.89l3.49,9.8a286.74,286.74,0,0,0-43.94,23.57l-6.32-8.43a17.9,17.9,0,0,0-24.94-3.6A17.69,17.69,0,0,0,116.84,82l6.45,8.61a286.59,286.59,0,0,0-34.95,35.33l-8.82-6.42a17.84,17.84,0,0,0-24.89,3.86,17.66,17.66,0,0,0,3.88,24.77l8.88,6.47a286.6,286.6,0,0,0-23,43.91l-10.48-3.59a17.73,17.73,0,1,0-11.59,33.52L32.67,232c-2.79,10-5.79,19.84-7.52,30.22a83.16,83.16,0,0,0-.82,19l-11.58,3.43a17.73,17.73,0,1,0,10.13,34l11.27-3.33a83.51,83.51,0,0,0,36.39,35.43l-2.88,11.06a17.81,17.81,0,0,0,34.48,8.92l2.87-11c1,0,2.07.26,3.1.26a83.39,83.39,0,0,0,45.65-13.88l8.59,8.8a17.77,17.77,0,0,0,25.56-24.7l-9.14-9.37a83.41,83.41,0,0,0,12.08-31.05,119.08,119.08,0,0,1,3.87-15.53l9,4.22a17.74,17.74,0,1,0,15.15-32.09l-8.8-4.11c.67-1,1.2-2.08,1.9-3.05a119.89,119.89,0,0,1,7.87-9.41,121.73,121.73,0,0,1,11.65-11.4,119.49,119.49,0,0,1,9.94-7.82c1.12-.77,2.32-1.42,3.47-2.15l3.92,8.85a17.86,17.86,0,0,0,16.32,10.58A18.14,18.14,0,0,0,272.35,226.4ZM128,256a32,32,0,1,1,32-32A32,32,0,0,1,128,256Zm80-96a16,16,0,1,1,16-16A16,16,0,0,1,208,160Zm431.26,45.3a17.79,17.79,0,0,0-17.06-12.69,17.55,17.55,0,0,0-5.08.74l-11.27,3.33a83.61,83.61,0,0,0-36.39-35.43l2.88-11.06a17.81,17.81,0,0,0-34.48-8.91l-2.87,11c-1,0-2.07-.26-3.1-.26a83.32,83.32,0,0,0-45.65,13.89l-8.59-8.81a17.77,17.77,0,0,0-25.56,24.7l9.14,9.37a83.28,83.28,0,0,0-12.08,31.06,119.34,119.34,0,0,1-3.87,15.52l-9-4.22a17.74,17.74,0,1,0-15.15,32.09l8.8,4.11c-.67,1-1.2,2.08-1.89,3.05a117.71,117.71,0,0,1-7.94,9.47,119,119,0,0,1-11.57,11.33,121.59,121.59,0,0,1-10,7.83c-1.12.77-2.32,1.42-3.47,2.15l-3.92-8.85a17.86,17.86,0,0,0-16.32-10.58,18.14,18.14,0,0,0-7.18,1.5A17.71,17.71,0,0,0,358.54,309l4,9.08a118.71,118.71,0,0,1-12.36,3.08,83.34,83.34,0,0,0-33.77,13.9l-10-9a17.77,17.77,0,1,0-23.92,26.28l9.72,8.75a83.12,83.12,0,0,0-11.65,48.18l-11.86,3.51a17.73,17.73,0,1,0,10.16,34l11.34-3.36A84,84,0,0,0,326.61,479l-2.84,10.85a17.8,17.8,0,0,0,34.47,8.93L361.06,488a83.3,83.3,0,0,0,16.74-1.1c11.37-1.89,22.24-5.07,33.1-8.24l3.38,9.46a17.8,17.8,0,0,0,33.56-11.89l-3.49-9.79a287.66,287.66,0,0,0,43.94-23.58l6.32,8.43a17.88,17.88,0,0,0,24.93,3.6A17.67,17.67,0,0,0,523.16,430l-6.45-8.61a287.37,287.37,0,0,0,34.95-35.34l8.82,6.42a17.76,17.76,0,1,0,21-28.63l-8.88-6.46a287.17,287.17,0,0,0,23-43.92l10.48,3.59a17.73,17.73,0,1,0,11.59-33.52L607.33,280c2.79-10,5.79-19.84,7.52-30.21a83.27,83.27,0,0,0,.82-19.05l11.58-3.43A17.7,17.7,0,0,0,639.26,205.3ZM416,416a32,32,0,1,1,32-32A32,32,0,0,1,416,416Z"/></svg> ]
+
+---
+
+.font180[.bold[Agenda]]
+
+
+.h35[
+- .font140[Introduzione]
+
+  - .font120[Il microbiota umano]
+  
+- .font140[Il microbiota delle piante]
+
+  - .font120[Da chi è composto]
+  
+  - .font120[Che funzioni ha]
+   
+  - .font120[Come prende forma]
+]
+
+???
+
+- .n[**Intro**: spiegazione dei concetti generali e dei termini]
+---
+
+
+.pull-left[.center[.font180[.bold[microBIOTA]]]
+&lt;br&gt;
+&lt;img src="images/microbiota.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+
+&lt;br&gt;
+&gt; .font80[si riferisce a una popolazione di microrganismi che colonizza un determinato luogo]
+
+]
+
+.pull-right[.center[.font180[.bold[microBIOMA]]]
+&lt;br&gt;
+&lt;img src="images/microbioma.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+
+&gt; .font80[indica la totalità del patrimonio genetico posseduto dal microbiota, cioè i geni che quest’ultimo è in grado di esprimere]
+
+]
+
+???
+
+- .n[si riferisce a una popolazione di microrganismi che colonizza un determinato luogo]
+
+- .n[batteri, funghi, protozoi, elminti, neamtodi, virus, ]
+ 
+- .n[indica la totalità del patrimonio genetico posseduto dal microbiota, cioè i geni che quest’ultimo è in grado di esprimere]
+
+- .n[la differenza che passa tra i due termini è la stessa che esiste tra popolazione umana e genoma umano]
+
+
+---
+
+
+.pull-left[.center[.font180[.bold[microBIOTA]]]]
+
+.pull-right[.center[.font180[.bold[microBIOMA]]]]
+
+&lt;br&gt;
+&lt;img src="images/microPublications.png" width="550px" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.center[.font600[.fontW7[HMP]]]
+.center[.font140[Human Microbiome Project]]
+
+---
+
+Il **progetto microbioma umano** è una iniziativa dei National Institutes of Health statunitensi con il fine di **identificare e caratterizzare i microrganismi ed il loro rapporto con lo stato di salute e di malattia dell'uomo**. 
+
+&lt;img src="images/microNubers.jpg" width="700px" style="display: block; margin: auto;" /&gt;
+
+???
+
+
+- .n[**RAPPORTO** cellule microbiche e cellule umane]
+
+- .n[Il numero totale di cellule microbiche presenti in un organismo umano può superare di dieci volte il numero di cellule dell'organismo stesso]
+
+- .n[i geni di origine microbica possono superare di cento volte il numero di geni presenti nel genoma umano (composto da circa 20.000 geni).]
+
+---
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.content-box-grey[.font180[.fontW7[L'essere umano va concepito come composto da cellule umane e microbiche]]]
+
+???
+
+- .n[Visto l'alto numero di cellule microbiche e della quantità del loro materiale genetico]
+
+- .n[L'essere umano va concepito come composto da cellule umane e microbiche]
+
+- .n[MA **quali** sono i micro-organismi]
+
+
+---
+.center[Temporal human microbiota]
+&lt;img src="images/humanEvo.jpg" width="750px" style="display: block; margin: auto;" /&gt;
+
+???
+
+- .n[La figura mostra i phyla chiave della composizione del microbiota umano in diversi stadi della vita]
+
+---
+
+.center[Spatial human microbiota]
+&lt;img src="images/humanDiversity.png" width="750px" height="580px" style="display: block; margin: auto;" /&gt;
+
+???
+
+- .n[Vediamo ora **dove** sono distribuiti i batteri]
+
+- .n[Partiamo dalla parte più interna della figura, dall'albero filigenetico]
+
+
+
+---
+layout: true
+class: clear
+.center[.font120[Human microbiota functions] .font80[(Kho and Lal, 2018)]]
+
+---
+&lt;img src="images/KhoPaperT3-1.png" width="800px" height="520px" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;br&gt;&lt;br&gt;
+&lt;img src="images/KhoPaperT3-2.png" width="900px" height="400px" style="display: block; margin: auto;" /&gt;
+---
+  
+&lt;img src="images/KhoPaperT3-3.png" width="900px" height="530px" style="display: block; margin: auto;" /&gt;
+
+---
+layout: false
+class: inverse, middle, center
+
+# Il microbiota delle piante
+
+----
+
+
+---
+layout: true 
+class: clear
+
+---
+
+
+&lt;img src="images/PlantmicroPublications.png" width="630px" style="display: block; margin: auto;" /&gt;
+
+---
+layout: true
+
+# Composizione del microbiota
+
+---
+class: inverse, middle, center
+
+----
+
+
+---
+
+## Glossario
+
+
+- .font80[**Rhizosphere**: The region of soil in the vicinity of plant roots that is influenced by plant-derived nutrients and oxygen availability; it is not a region of definable size or shape, but instead consists of a gradient in chemical, biological and physical properties that change both radially and longitudinally along the root.]
+
+--
+
+- .font80[**Phyllosphere**: All the aboveground organs of plants, including the leaf, flower, stem and fruit.]
+
+--
+
+- .font80[**Endophytes**: The microorganisms residing within plant tissues (the endosphere), such as leaves, roots or stems.]
+
+--
+
+- .font80[**Bulk soil**:  is soil outside the rhizosphere. Bulk soil is not penetrated by plant roots]
+
+---
+
+layout: true
+# Composizione del microbiota
+
+
+
+---
+
+.center[
+.h20[
+**Spatial plant microbiota**    
+.font50[(Singh, Raina, Kumar, Singh, and Prasad, 2019)]
+]
+
+&lt;img src="images/PlantMicrobiomeComposition.png" width="470px" height="470px" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+.center[
+.h20[
+**Temporal plant microbiota**    
+.font50[(Sapkota, Jørgensen, and Nicolaisen, 2017)]
+]
+
+&lt;img src="images/plantMicrobiotaTemporal.png" width="530px" height="470px" style="display: block; margin: auto;" /&gt;
+
+]
+
+???
+
+.n30[
+
+- La composzione del microbiota vegetale è, come quella umana, dipendente dalla fase evolutiva della pianta e dal comparto che si sceglie di studiare.
+
+- La figura sulla sinistra dello schermo cerca di schematizzare i recenti studi fatti sul microbiota delle piante
+
+]
+
+---
+
+
+**Microbiota reservoir**    
+
+.pull-left[
+- .n[Although the assemblies of root-associated bacteria and fungi differ substantially from the above-ground communities, both represent a **subset of the microbiota derived from soil communities** and enriched in different plant-associated niches]
+
+- .n[This suggests that **soil functions as a common reservoir** for both belowground and aboveground plant microbiota]
+]
+
+.pull-rigth[
+
+.h20[
+&lt;img src="images/reservoir.png" width="450px" height="450px" style="display: block; margin: auto;" /&gt;
+.right[.font50[(Agnello, Morelli, and Del Panno, 2020)]]
+]
+]
+
+???
+
+.n30[
+- Un'importante considerazione da fare è che sebbene le comunità batteriche e fungine che sono associate alla piante siano molto diverse tra la parte ipogea e la parte epigea della pianta, entrambe rappresentano un sottogruppo del microbiota derivato dalle comunità del suolo
+
+- Possiamo quindi dire che il suolo funziona come riserva comune per il microbiota della pianta epigeo e ipogeo
+]
+
+---
+
+.pull-left[
+
+&lt;img src="images/bacterialDiv.png" width="350px" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="images/fungalDiv.png" width="350px" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+- .n[There are clear differences among the microbial communities in different plant compartments, which indicates that the **plant compartment is a major selective force** that shapes the composition of plant-associated microbiota]
+
+]
+
+???
+
+- .n[**Shannon diversity index**: combina ricchezza e diversità]
+
+- .n[Misura sia il numero delle specie presenti e la differenza tra l'abbondanza delle diverse specie.]
+
+- .n[Un valore grande significa che sono presenti molte specie con un'abbondanza simile. Il range del valore varia da 1 (una specie dominante) fino al numero totale di tutte le species (nel caso che tutte le specie abbiano la stessa abbondanza)]
+
+---
+
+.pull-left[
+
+**CORE MICROBIOTA**
+
+.h202[
+.m0ul[
+
+- The plant core microbiota consists of members of the microbial community that are **persistent and are ubiquitous in almost all the communities** associated with a particular host
+
+- The core microbiota contains key microbial taxa that carry **genes with functions that are essential** for host fitness
+
+- Many members of the core microbiota of different plant species are **common at the genus level**
+
+- The identification of a co-occurring core of plant-associated microorganisms also provides a useful starting point for studies of how to build **SynComs** to manipulate plant–microbiome interactions for increased **growth and productivity**
+
+]
+]
+]
+
+.pull-right[
+&lt;br&gt;
+&lt;img src="images/core1.png" width="400px" style="display: block; margin: auto;" /&gt;
+]
+
+???
+    
+.h25[
+    - .n[Il **core microbiota** è composto da alcuni membri del microbiota che sono presenti in tutte, o quasi, le comunità associate ad una determinato ospite]
+    
+    - .n[E i suoi membri esprimono geni le cui funzioni sono di primaria importanza per la salute del loro ospite]
+    
+    - .n[Seppur diverse piante abbiamo microbiota diversi, un certo numero di membri è lo stesso]
+    
+    - .n[L'identificazione di microorganismi che fanno parte di diversi **core microbiota** è di grande importanza per la produzione delle comunità sintetiche, da usare in agricoltura per aumentare la crescita e la produttività delle piante]
+]
+---
+
+.pull-left[
+&lt;br&gt;
+&lt;img src="images/core2.png" width="400px" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+
+.pull-right[
+**HUB MICROBIOTA**
+.h202[
+- Within the core microbiota, a few members, such as ‘hub microorganisms’, can **influence the community structure** through strong biotic interactions with the host or with other microbial species, rather than simply by their own high abundance
+
+- These hub species may represent **keystone species** that can exert strong direct and indirect effects on microbiome assembly and that **function as mediators** between the plant and its associated microbiome.
+
+- For example, *Albugo laibachii* and *Dioszegia spp.* have been identified as highly interactive hubs in the phyllosphere of *A. thaliana* [Agler, et al. 2016]
+
+]]
+
+???
+
+.h35[
+
+- .n[All'interno del core microbiota, alcuni membri possono influenzare la struttura dell'intera comunità, non per la loro abbondanza, ma per le loro interazione dirette od indirette con la pianta o gli altri microorganismi. Vengono definiti: **hub microorganism**]
+
+- .n[**hub** letteralmente significa: centro, perno, fulcro]
+
+- .n[Esempio di hubs identificati nella fillosfera di arabidopsis. Albugo è un oomicete obligato mentre Dioszegia è un basidiomicete]
+
+
+]
+
+
+---
+layout: true
+
+# Plant Holobiont
+
+---
+
+class: inverse, middle, center
+
+----
+
+---
+
+.m10bp[
+&lt;img src="images/holobiont1.png" width="800px" style="display: block; margin: auto;" /&gt;
+.right[.font50[(Berg, Köberl, Rybakova, Müller, Grosch, and Smalla, 2017)]]
+]
+
+.m0p[
+.h20[
+.font80[Plants and their associated microorganisms form a holobiont and have to be considered as co-evolved species assemblages consisting of bacterial, archaeal and diverse eukaryotic species]
+]
+]
+
+???
+
+.n30[
+- olobionte definisce l'organismo vivente alla luce della convivenza con il proprio microbiota
+
+- Se l'organismo e' un olobionte, il suo genoma sara' un ologenoma, ovvero l'insieme del genoma dell'organismo ospite e del genoma dei microrganismi che lo abitano
+
+- Se davvero questi genomi si comportano come una cosa sola, l'ologenoma deve essere considerato un'unità di selezione, ovvero un unico bersaglio della selezione naturale, e in quanto tale evolve come un unico individuo
+]
+
+---
+
+.pull-left[
+### Holobiont functions
+.m0p[
+&lt;img src="images/holobiont2.png" width="500px" style="display: block; margin: auto;" /&gt;
+.right[.font50[(Theis, Dheilly, Klassen, Brucker, Baines, Bosch, Cryan, Gilbert, Goodnight, Lloyd, Sapp, Vandenkoornhuyse, Zilber-Rosenberg, Rosenberg, and Bordenstein, 2016)]]
+]
+]
+
+.pull-right[
+.m0p[
+.h26[
+- Microbial diversity and balance is a key for healthy plants
+
+- Microbial species have the ability to contribute multiple aspects to the system    
+
+    - seed germination and growth    
+    - nutrient supply    
+    - resistance against biotic stress factors    
+    - resistance against abiotic factors    
+    - physiology and production of bioactive metabolites
+
+- The presence of microbes in plants became initially noticeable when diseases appeared. However, the vast majority of microbes in plants are not causal agents of damage in plants
+]
+]
+]
+
+???
+
+.n30[
+- La presenza dei microorganismi sulle piante e' di certo legata alla presenza di malattie. MA, la maggior parte dei microorganismi non causano alcuna malattia alla pianta.
+
+- Anzi, questi microorganismi possono contribuire a diversi aspetti: 
+
+]
+
+---
+
+layout: true
+
+# Questions about the lesson
+
+
+---
+
+
+.m0tbp[
+.center[.font50px[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:black;overflow:visible;position:relative;"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"/></svg>]]
+]
+
+.marco[
+.center[.font90[[[<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3eRDBRL) - <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
+]
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

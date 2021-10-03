@@ -21,7 +21,7 @@ output:
 # TO render: rmarkdown::render('Lesson1.Rmd', 'xaringan::moon_reader')
 
 # set working directory to docs folder
-setwd(here::here("docs"))
+# setwd(here::here("docs"))
 
 # Set global R options
 options(htmltools.dir.version = FALSE, servr.daemon = TRUE)
@@ -68,12 +68,12 @@ class: title-slide
 .marco[
 Marco Chiapello
 <br>
-2020-11-10
+2021-10-06
 ]
 
 
 .marco[
-.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3eRDBRL) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
+.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3upNjCt) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
 ]
 ]
 
@@ -89,11 +89,29 @@ class: clear
 
 ---
 
+.font180[.bold[About the teacher `r fontawesome::fa("chalkboard-teacher", fill = "black")`]]
+
+.pull-left[
+
+- Marco Chiapello, PhD
+
+- Plant Biologist `r fontawesome::fa("seedling", fill = "#25403B")`
+
+- Bioinformatician `r fontawesome::fa("laptop", fill = "black")`
+
+- R addicted `r fontawesome::fa("registered", fill = "black")`
+
+- Deeply in love with teaching `r fontawesome::fa("chalkboard-teacher", fill = "black")`
+]
+
+
+---
+
 .font180[.bold[General Introduction `r fontawesome::fa("compass", fill = "black")`]]
 
 - .font120[Learning] 
 
-- .font120[Motivate]
+- .font120[Concept maps]
 
 - .font120[Feedbacks]
 
@@ -105,24 +123,34 @@ class: clear
 .n30[
 - Learning: L'apprendimento non e' qualcosa che si fa agli studenti, l'apprendimento e' un processo e non un prodotto
 
-- Motivate: La motivazione degli studenti determina, orienta e sostiene cio' che essi fanno per imparare. Sta **anche** me riuscire a motivarvi e a creare l'effetto whoa
+- Concept maps: in questo corso proveremo ad utilizzare le concept maps come strumento di apprendimento. Vi verrà quindi chiesto di schematizzare i concetti appresi tramite mappe concettuali per riuscire a fissare i contenuti
 
-- Feedback: E' studiato e risaputo che l'atmosfera sociale, emotova ed intellettuale della classe influenzi l'apprendimento. Quindi interagiamo => sono disponibile a rispondere e chiarire ogni dubbio sia in classe che fuori
+- Feedback: E' studiato e risaputo che l'atmosfera sociale, emotova ed intellettuale della classe influenzi l'apprendimento. Quindi interagiamo => sono disponibile a rispondere e chiarire ogni dubbio sia in classe che fuori (Slack). Vi chiederò anche dei feedback sulle lezioni per capire se stiamo andando nella giusta direzione. 
 
 - Silly questions: esistono, ma non e' stupido chi le fa! Mi permettono di capire se devo approfondire qualche concetto
 ]
 
 ---
 
-class: center, middle
 
-.font180[.bold[Course overview]]
+.font180[.bold[Course overview - Lecture]]
 
-.font120[Lecture: Plant Microbiota `r fontawesome::fa("tree", fill = "green")`] 
-<br>
-.font120[Lecture: Ecological Significance of Viruses `r anicon::cia("images/virus-3128.png", anitype = "hover")`]
+- .font120[Plant Microbiota `r fontawesome::fa("tree", fill = "green")`] 
 
-.font120[Practical: How to define a oomycete virome `r fontawesome::fa("laptop-code", fill = "grey")` ]
+- .font120[Ecological Significance of Viruses `r anicon::cia("images/virus-3128.png", anitype = "hover")`]
+
+- .font120[Elements of Bioinformatics `r fontawesome::fa("laptop-code", fill = "grey")`]
+
+---
+
+
+.font180[.bold[Course overview - Practical]]
+
+- .font120[Wet lab: How to perform a PCR `r fontawesome::fa("dna", fill = "grey")` ]
+ 
+- .font120[Dry lab: How to perform alignments/blast/phylogenetic trees `r fontawesome::fa("align-justify", fill = "grey")` ]
+
+- .font120[Dry lab: How to perform microbiota analysis `r fontawesome::fa("bacteria", fill = "grey")` ]
 
 ---
 
