@@ -139,6 +139,8 @@ class: clear
 
 - .font120[Ecological Significance of Viruses `r anicon::cia("images/virus-3128.png", anitype = "hover")`]
 
+- .font120[Reproducible research `r fontawesome::fa("flask", fill = "grey")`]
+
 - .font120[Elements of Bioinformatics `r fontawesome::fa("laptop-code", fill = "grey")`]
 
 ---
