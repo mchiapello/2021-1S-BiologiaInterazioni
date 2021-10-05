@@ -79,9 +79,14 @@ Marco Chiapello
 
 ???
 
-.n30[
+.n[
 
-- Sarò uno dei vostri docenti per il corso "Interazioni tra piante, microrganismi e ambiente"
+- Avete mai sentito parlare di quei prodotti che uccido il 99% dei germi?    
+- Noi sappiamo che i germi sono cattivi: batteri, virus, funghi causano malattie e quindi vanno sterminati
+
+- L'obiettivo di questo modulo è farvi capire quanto questa CREDENZA POPOLARE sia sbagliata e non abbia alcun senso
+
+- Vedremo come batteri, funghi e virus abbiano un profondo significato ecologico e siano indispensabili per la nostra saluta e per quella delle piante
 ]
 ---
 layout: true
@@ -135,24 +140,24 @@ class: clear
 
 .font180[.bold[Course overview - Lecture]]
 
-- .font120[Plant Microbiota `r fontawesome::fa("tree", fill = "green")`] 
+- .font120[Plant Microbiota (5 hours) `r fontawesome::fa("tree", fill = "green")`] 
 
-- .font120[Ecological Significance of Viruses `r anicon::cia("images/virus-3128.png", anitype = "hover")`]
+- .font120[Ecological Significance of Viruses (2 hours) `r anicon::cia("images/virus-3128.png", anitype = "hover")`]
 
-- .font120[Reproducible research `r fontawesome::fa("flask", fill = "grey")`]
+- .font120[Reproducible research (1 hour) `r fontawesome::fa("flask", fill = "grey")`]
 
-- .font120[Elements of Bioinformatics `r fontawesome::fa("laptop-code", fill = "grey")`]
+- .font120[Elements of Bioinformatics (2 hours) `r fontawesome::fa("laptop-code", fill = "grey")`]
 
 ---
 
 
 .font180[.bold[Course overview - Practical]]
 
-- .font120[Wet lab: How to perform a PCR `r fontawesome::fa("dna", fill = "grey")` ]
+- .font120[Wet lab: How to perform a PCR (3 hours) `r fontawesome::fa("dna", fill = "grey")` ]
  
-- .font120[Dry lab: How to perform alignments/blast/phylogenetic trees `r fontawesome::fa("align-justify", fill = "grey")` ]
+- .font120[Dry lab: How to perform alignments/blast/phylogenetic trees (1.5 hours) `r fontawesome::fa("align-justify", fill = "grey")` ]
 
-- .font120[Dry lab: How to perform microbiota analysis `r fontawesome::fa("bacteria", fill = "grey")` ]
+- .font120[Dry lab: How to perform microbiota analysis (1.5 hours) `r fontawesome::fa("bacteria", fill = "grey")` ]
 
 ---
 
@@ -350,6 +355,10 @@ knitr::include_graphics("images/humanDiversity.png")
 
 - .n[Partiamo dalla parte più interna della figura, dall'albero filigenetico]
 
+- .n[Commensalismo: relazione tra due organismi in cui uno dei due beneficia senza danneggiare l'altro]
+
+- .n[Parassitismo: relazione tra due organismi in cui uno dei due beneficia danneggiando l'altro]
+
 
 
 ---
@@ -446,19 +455,80 @@ class: inverse, middle, center
 ## Glossario
 
 
+- .font80[**Rhizosphere**: .white[The region of soil in the vicinity of plant roots that is influenced by plant-derived nutrients and oxygen availability; it is not a region of definable size or shape, but instead consists of a gradient in chemical, biological and physical properties that change both radially and longitudinally along the root.]]
+
+
+- .font80[**Phyllosphere**: .white[All the aboveground organs of plants, including the leaf, flower, stem and fruit.]]
+
+
+- .font80[**Endophytes**: .white[The microorganisms residing within plant tissues (the endosphere), such as leaves, roots or stems.]]
+
+
+- .font80[**bulk soil**: .white[is soil outside the rhizosphere. bulk soil is not penetrated by plant roots]]
+
+---
+
+## Glossario
+
+
 - .font80[**Rhizosphere**: The region of soil in the vicinity of plant roots that is influenced by plant-derived nutrients and oxygen availability; it is not a region of definable size or shape, but instead consists of a gradient in chemical, biological and physical properties that change both radially and longitudinally along the root.]
 
---
+
+- .font80[**Phyllosphere**: .white[All the aboveground organs of plants, including the leaf, flower, stem and fruit.]]
+
+
+- .font80[**Endophytes**: .white[The microorganisms residing within plant tissues (the endosphere), such as leaves, roots or stems.]]
+
+
+- .font80[**bulk soil**: .white[is soil outside the rhizosphere. bulk soil is not penetrated by plant roots]]
+
+---
+
+## Glossario
+
+
+- .font80[**Rhizosphere**: The region of soil in the vicinity of plant roots that is influenced by plant-derived nutrients and oxygen availability; it is not a region of definable size or shape, but instead consists of a gradient in chemical, biological and physical properties that change both radially and longitudinally along the root.]
+
 
 - .font80[**Phyllosphere**: All the aboveground organs of plants, including the leaf, flower, stem and fruit.]
 
---
+
+- .font80[**Endophytes**: .white[The microorganisms residing within plant tissues (the endosphere), such as leaves, roots or stems.]]
+
+
+- .font80[**bulk soil**: .white[is soil outside the rhizosphere. bulk soil is not penetrated by plant roots]]
+
+---
+
+## Glossario
+
+
+- .font80[**Rhizosphere**: The region of soil in the vicinity of plant roots that is influenced by plant-derived nutrients and oxygen availability; it is not a region of definable size or shape, but instead consists of a gradient in chemical, biological and physical properties that change both radially and longitudinally along the root.]
+
+
+- .font80[**Phyllosphere**: All the aboveground organs of plants, including the leaf, flower, stem and fruit.]
+
 
 - .font80[**Endophytes**: The microorganisms residing within plant tissues (the endosphere), such as leaves, roots or stems.]
 
---
 
-- .font80[**Bulk soil**:  is soil outside the rhizosphere. Bulk soil is not penetrated by plant roots]
+- .font80[**bulk soil**: .white[is soil outside the rhizosphere. bulk soil is not penetrated by plant roots]]
+
+---
+
+## Glossario
+
+
+- .font80[**Rhizosphere**: The region of soil in the vicinity of plant roots that is influenced by plant-derived nutrients and oxygen availability; it is not a region of definable size or shape, but instead consists of a gradient in chemical, biological and physical properties that change both radially and longitudinally along the root.]
+
+
+- .font80[**Phyllosphere**: All the aboveground organs of plants, including the leaf, flower, stem and fruit.]
+
+
+- .font80[**Endophytes**: The microorganisms residing within plant tissues (the endosphere), such as leaves, roots or stems.]
+
+
+- .font80[**bulk soil**: is soil outside the rhizosphere. bulk soil is not penetrated by plant roots]
 
 ---
 
@@ -727,7 +797,25 @@ layout: true
 ]
 
 .marco[
-.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3eRDBRL) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
+.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3upNjCt) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
 ]
 ]
+
+---
+
+layout: true
+
+# Feedbacks
+
+
+---
+
+```{r echo=FALSE, out.width = "400px"}
+knitr::include_graphics("images/Lesson1_feebback.png")
+```
+
+.m0tbp[
+.center[https://bit.ly/3B8iTr2]
+]
+
 
