@@ -209,7 +209,7 @@ knitr::include_graphics("images/microbiota.jpg")
 knitr::include_graphics("images/microbioma.jpg")
 ```
 
-> .font80[indica la totalità del patrimonio genetico posseduto dal microbiota, cioè i geni che quest’ultimo è in grado di esprimere]
+> .font70[indica la totalità del patrimonio genetico posseduto dal microbiota, cioè i geni che quest’ultimo è in grado di esprimere]
 
 ]
 
