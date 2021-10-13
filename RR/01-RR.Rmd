@@ -47,12 +47,15 @@ BibOptions(check.entries = FALSE,
            style = "markdown",
            hyperlink = FALSE,
            dashed = FALSE)
-bib <- ReadBib("RR/bib/myBib.bib", check = FALSE)
+bib <- ReadBib("bib/myBib.bib", check = FALSE)
+```
+
+```{r xaringanExtra, echo=FALSE}
+library(xaringanExtra)
+use_tile_view() 
 ```
 
 class: title-slide   
-<a href="https://github.com/PhD-Toolbox-course/2020_PhD_Toolbox_course"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-
 
 <br><br><br>
 # .font200[Data science in Unix and R]
@@ -69,15 +72,15 @@ Marco Chiapello
 
 # PhDToolbox Course
 
-```{r ds-class-options, echo=FALSE, out.width = "1100px"}
-knitr::include_graphics("RR/images/environmental-data-science-r4ds-general.png")
+```{r ds-class-options, echo=FALSE, out.width = "1000px"}
+knitr::include_graphics("images/environmental-data-science-r4ds-general.png")
 ```
 
 ---
 # What reproducible research is
 
 ```{r fulmine, echo=FALSE, out.width = "750px"}
-knitr::include_graphics("RR/images/001.jpg")
+knitr::include_graphics("images/001.jpg")
 ```
 
 ???
@@ -86,7 +89,7 @@ thunderstruck
 # What reproducible research is
 
 ```{r miracle, echo=FALSE, out.width = "750px"}
-knitr::include_graphics("RR/images/thenamiracleoccurs.jpg")
+knitr::include_graphics("images/thenamiracleoccurs.jpg")
 ```
 
 This is exactly how it seems when you try to figure out how authors got from a large and complex data set to a dense paper with lots of busy figures.
@@ -117,8 +120,8 @@ Without access to the data and the analysis code, a miracle occurred.
 
 # What reproducible research is
 
-```{r motivate, echo=FALSE, out.width = "1200px"}
-knitr::include_graphics("RR/images/motivatedReasoning.png")
+```{r motivate, echo=FALSE, out.width = "1000px"}
+knitr::include_graphics("images/motivatedReasoning.png")
 ```
 
 ---
@@ -178,7 +181,7 @@ knitr::include_graphics("RR/images/motivatedReasoning.png")
 
 
 ```{r tab1, echo=FALSE, out.width = "1200px"}
-knitr::include_graphics("RR/images/Screenshot 2020-05-19 at 06.49.21.png")
+knitr::include_graphics("images/Screenshot 2020-05-19 at 06.49.21.png")
 ```
 <br><br><br>
 .marco[
@@ -429,7 +432,7 @@ Let us change our traditional attitude to the construction of programs: Instead 
 ## RMarkdown
 
 ```{r rmark2, echo=FALSE, out.width = "420px"}
-knitr::include_graphics("RR/images/RMarkdownOutputFormats.png")
+knitr::include_graphics("images/RMarkdownOutputFormats.png")
 ```
 
 .center[Ref: http://rmarkdown.rstudio.com/index.html]
@@ -461,7 +464,7 @@ We strongly advise to split your project in folder and not dumpo everything on t
 
 .pull-left[
 ```{r git, echo=FALSE, out.width = "350px"}
-knitr::include_graphics("RR/images/versionControl.jpg")
+knitr::include_graphics("images/versionControl.jpg")
 ```
 ]
 
