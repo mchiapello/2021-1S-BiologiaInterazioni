@@ -21,7 +21,7 @@ output:
 # TO render: rmarkdown::render('Lesson1.Rmd', 'xaringan::moon_reader')
 
 # set working directory to docs folder
-setwd(here::here("docs"))
+setwd(here::here())
 
 # Set global R options
 options(htmltools.dir.version = FALSE, servr.daemon = TRUE)
@@ -68,144 +68,31 @@ class: title-slide
 .marco[
 Marco Chiapello
 <br>
-2020-11-17
+2021-10-13
 ]
 
 
 .marco[
-.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3eRDBRL) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
+.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3upNjCt) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
 ]
 ]
 
 ---
-layout: true
 
-# Last lesson check
+class: inverse, middle, center
 
----
-
-```{r echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/qr-code_lesson1.png")
-```
-
-.center[https://bit.ly/3np9ILA]
+# Concept maps vs mental maps
 
 ---
 
-class: clear, middle, center
-
-# .black[Il microbiota vegetale varia?]
-
-.m0tbp[
-```{r echo=FALSE, out.width="950px"}
-# Load libraries
-library(tidyverse)
-library(googledrive)
-library(googlesheets4)
-library(patchwork)
-library(gt)
-
-# drive_auth()
-# gs4_auth(token = drive_token())
-
-# Either specify the user:
-drive_auth(email = "mc983.cam@gmail.com")
-# Or, if you don't use multiple Google identities, you can be more vague:
-drive_auth(email = TRUE)
-gs4_auth(token = drive_token())
-
-# Read data
-x <- read_sheet("https://docs.google.com/spreadsheets/d/1sdDGSWsAMKoohNJCBRrEwekarL_8xakCTmcHQFb_NnU/edit#gid=2067277305")
-
-# Domanda 1
-d1 <- x %>%
-	select(3)
-names(d1) <- "Opzioni"
-d1 %>%
-	group_by(Opzioni) %>%
-    summarise(Risposte = sum(n())) %>%
-	gt() %>%
-    text_transform(
-       locations = cells_body(
-         columns = "Risposte",
-         rows = Opzioni != "Si, varia nel tempo. In diversi momenti della vita della pianta la composizione del microbiota muta"),
-       fn = function(x) paste(x, fontawesome::fa("times-circle", fill = "red"))
-     )%>%
-    text_transform(
-       locations = cells_body(
-         columns = "Risposte",
-         rows = Opzioni == "Si, varia nel tempo. In diversi momenti della vita della pianta la composizione del microbiota muta"),
-       fn = function(x) paste(x, fontawesome::fa("check-circle", fill = "green"))
-     )
-```
-]
-
----
-
-class: clear, middle, center
-
-# .black[Qual è la forza selettiva maggiore che da forma al microbiota associato alle piante?]
-
-.m0tbp[
-```{r echo=FALSE, out.width="950px"}
-# Domanda 1
-d2 <- x %>%
-	select(4)
-names(d2) <- "Opzioni"
-d2 %>%
-	group_by(Opzioni) %>%
-    summarise(Risposte = sum(n())) %>%
-	gt() %>%
-    text_transform(
-       locations = cells_body(
-         columns = "Risposte",
-         rows = Opzioni != "La pianta"),
-       fn = function(x) paste(x, fontawesome::fa("times-circle", fill = "red"))
-     )%>%
-    text_transform(
-       locations = cells_body(
-         columns = "Risposte",
-         rows = Opzioni == "La pianta"),
-       fn = function(x) paste(x, fontawesome::fa("check-circle", fill = "green"))
-     )
-```
-]
-
----
-
-class: clear, middle, center
-
-# .black[Per olobiote si intende...]
-
-.m0tbp[
-```{r echo=FALSE, out.width="950px"}
-# Domanda 1
-d3 <- x %>%
-	select(5)
-names(d3) <- "Opzioni"
-d3 %>%
-	group_by(Opzioni) %>%
-    summarise(Risposte = sum(n())) %>%
-	gt() %>%
-    text_transform(
-       locations = cells_body(
-         columns = "Risposte",
-         rows = Opzioni != "Un organismo vivente alla luce della convivenza con il proprio microbiota"),
-       fn = function(x) paste(x, fontawesome::fa("times-circle", fill = "red"))
-     )%>%
-    text_transform(
-       locations = cells_body(
-         columns = "Risposte",
-         rows = Opzioni == "Un organismo vivente alla luce della convivenza con il proprio microbiota"),
-       fn = function(x) paste(x, fontawesome::fa("check-circle", fill = "green"))
-     )
-```
-]
-
----
 layout: true
 
 # Last lesson recap
+
+---
+
+class: inverse, middle, center
+
 
 ---
 
@@ -342,6 +229,169 @@ knitr::include_graphics("images/core2.png")
 ]
 
 ---
+
+layout: true
+
+# Core microbiota
+
+---
+
+class: inverse, middle, center
+
+???
+
+.n30[
+- Organismi comuni tra diversi microbiomi, supposti giocare un ruolo chiave nelle funzioni dell'ecosistema
+
+- Analisi del core microbiota è più complessa che un semplice diagramma di VENN
+
+- Definizione OTU: Operation taxonomical unit (è una definizione operativa usata per classificare gruppi di individui che sono fortemente imparentati)
+
+
+]
+
+---
+
+<br>
+
+```{r echo=FALSE, out.width="1020px"}
+knitr::include_graphics("images/shade1.png")
+```
+
+.right[.font50[(Shade et al., 2011)]]
+
+???
+
+.n30[
+- L'analisi membership considera gli OTU condivisi
+
+- Si limita a presenza assenza
+
+
+]
+
+---
+
+<br>
+
+```{r echo=FALSE, out.width="1020px"}
+knitr::include_graphics("images/shade2.png")
+```
+
+.right[.font50[(Shade et al., 2011)]]
+
+???
+
+.n30[
+- L'analisi membership ignora l'abbondanza relativa delle OTU presenti
+
+- L'analisi dell'abbondanza Contribuisce a darci informazioni ecologiche più complete
+
+]
+
+---
+
+<br>
+
+```{r echo=FALSE, out.width="1020px"}
+knitr::include_graphics("images/shade3.png")
+```
+
+.right[.font50[(Shade et al., 2011)]]
+
+???
+
+.n30[
+- Una sfida fondamentale nello studio del microbioma è correlare la composizione alla funzione biologica
+
+- **Ridondanza filogenetica**: quando più OTU dalla stesso lignaggio sono presenti in diversi microbiomi
+
+- **Ridondanza funzionale**: quando più OTU isvolgono la stessa azione (fissazione azotata)
+
+- Domanda interessante: Le OTU ridondanti devono contare allo stesso modo delle OTU uniche nella definizione del core microbiota?
+
+]
+
+---
+
+<br>
+
+```{r echo=FALSE, out.width="1020px"}
+knitr::include_graphics("images/shade4.png")
+```
+
+.right[.font50[(Shade et al., 2011)]]
+
+???
+
+.n30[
+- Il microbiota è dinamico nello spazio e nel tempo
+
+- Il sistema di detection delle OTU può quindi rilevare OTU transienti (queste non devono contare)
+
+- Contano solo le OTU trovate in tutte le osservazioni (o nella maggior parte)
+]
+
+---
+
+<br>
+
+```{r echo=FALSE, out.width="1020px"}
+knitr::include_graphics("images/shade5.png")
+```
+
+.right[.font50[(Shade et al., 2011)]]
+
+???
+.n30[
+- Il concetto di core microbiota può anche includere informazioni sull'interazione tra OTU
+
+- L'idea di identificare il core microbiota in base alle relazioni tra diversi taxa, omettendo i taxa che non presentano interazioni
+
+- Questo approccio è più difficile poichè richiede moltissime informazioni pregresse per la predizione delle connessioni
+]
+
+---
+
+layout: true
+
+# Hub microbiota
+
+---
+
+class: inverse, middle, center
+
+???
+
+.n30[
+
+- Piccolo numero di taxa/OTU, che sono fortemente interconnessi e hanno un forte effetto sulla comunità
+
+]
+
+---
+
+
+```{r echo=FALSE, out.width="800px"}
+knitr::include_graphics("images/agler1.png")
+```
+
+.right[.font50[(Agler et al., 2016)]]
+
+???
+
+.n30[
+- Correlation network: 
+
+- correlazione positiva in arancione    
+
+- correlazione negastiva in trattegiato nero    
+
+- lo spessore delle linee indica l'intensità della correlazione
+
+]
+
+---
 layout: false
 class: clear 
 
@@ -359,7 +409,7 @@ class: clear
 
 ???
 
-.h201[
+.n30[
 - Questa lezione prevede dei capitoli che riguardano la **pratica** dello studio del microbiota
 
 - Nel primo capitolo vedremo come si rispone alla domanda: "Chi è presente?"
@@ -383,7 +433,7 @@ class: inverse, middle, center
 
 ???
 
-.h201[
+.n30[
 - Inziamo a vedere come si studia la composizione del microbiota
 
 - Rispondiamo quindi alla domanda: "Chi è presente?"
@@ -403,10 +453,12 @@ knitr::include_graphics("images/microbiotaCompositionTecniques.png")
 
 ???
 
-.h201[
+.n30[
 - Le 2 metodologie di studio del microbiota si basano su 2 principi diametralmente opposti:
-  - Da una parta vedremo un approccio indipendete dalla coltura in vitro ma basato sul materiale genetico     
-  - Dall'altra un approccio esclusivamente incentrato sulla coltura in vitro
+
+- Da una parta vedremo un approccio indipendete dalla coltura in vitro ma basato sul materiale genetico     
+
+- Dall'altra un approccio esclusivamente incentrato sulla coltura in vitro
 ]
 
 ---
@@ -428,7 +480,7 @@ knitr::include_graphics("images/microbiotaCompositionTecniques.png")
 
 ???
 
-.h201[
+.n30[
 
 - **Easy Poll**
 
@@ -460,7 +512,7 @@ knitr::include_graphics("images/microbiotaCompositionTecniques.png")
 
 ???
 
-.h201[
+.n30[
 - Il metodo indipendente dalla coltura, che approfondiremo meglio nelle prossime slides, ha 2 indiscutibili vantaggi: 
   - L'abilità non solo di identificare ma anche di quantificare l'abbondanza dei microorganismi presenti. Permettendo di identificare anche organismi estremamente poco abbondanti     
   - Utilizzando approcci bioinformatici è possibile ricavare importati informazioni sul funzionamento dell'intera comunità e non solo sui singoli individui
@@ -479,21 +531,14 @@ knitr::include_graphics("images/microbiotaCompositionTecniques.png")
 
 ???
 
-.h201[
+.n30[
 
 - Vediamo ora come studiare il microbiota con **tecniche coltura indipendenti**!
 - Per studiare il microbiota e quindi identificare gli organismi lo compongono si utilizza una tecnica chiamata **DNA METABARCODING**
 
 - Questa tecnica utilizza il **DNA barcoding** per studiare la composizione del microbiota
 
-- **CHE COS'E' il DNA BARCODING"**
 ]
-
---
-
-<br>
-.content-box-grey[What is it the <br> **DNA barcoding**?]
-
 
 ---
 
@@ -510,7 +555,7 @@ knitr::include_graphics("images/DNAbarcoding.png")
 
 ???
 
-.h201[
+.n30[
 - Il DNA Barcoding è una tecnica che permette di identificare l'organismo studiato basandosi su una sua specifica sequenza nucleotidica
 
 - L'idea è utilizzare una sequenza di DNA per identificare un organismo in maniera univoca. 
@@ -527,7 +572,7 @@ knitr::include_graphics("images/DNAbarcoding.png")
 .pull-left[
 **Marker selection**
 
-.h201[
+.n30[
 - Markers used for DNA barcoding are called barcodes and their selection is crucial
 
 - Ideally, one gene sequence would be used for developing universal PCR primers for all taxonomic group
@@ -549,7 +594,7 @@ knitr::include_graphics("images/DNAbarcoding2.png")
 
 ???
 
-.h201[
+.n30[
 - Siccome i microrganismi non sono registrati all'anagrafe e non hanno un loro CF, cosa possiamo usare come sequenza univoca per identificarli?
 
 - La selezione di queste sequenze marker (**chiamate barcode**) è cruciale per l'identificazione dei microorganismi
@@ -601,7 +646,7 @@ knitr::include_graphics("images/sanger.png")
 
 ???
 
-.h201[
+.n30[
 - Vedete qui una lista di barcodes per diversi organismi
 
 - Questi geni sono stati scelti a causa della dell'evoluzione lenta 
@@ -629,7 +674,7 @@ knitr::include_graphics("images/barcoding.png")
 
 ???
 
-.h201[
+.n30[
 - **Easy Poll**
 ]
 
@@ -641,7 +686,7 @@ knitr::include_graphics("images/barcoding.png")
 .m0p[
 **Bioinformatic analysis**
 ]
-.h201[
+.n30[
 - After sequencing, raw data must be processed (**quality and cleaning step**)
 
 - Samples are clustered in operational taxonomic unit based on identity threshold (**OTU formation**)
@@ -670,7 +715,7 @@ knitr::include_graphics("images/OTU.png")
 
 ???
 
-.h201[
+.n30[
 - These databases contain the DNA barcodes assigned to previously identified taxa
 
 - An operational taxonomic unit (OTU) is an operational definition used to classify groups of closely related individuals
@@ -689,7 +734,7 @@ class: inverse, middle, center
 
 ???
 
-.h201[
+.n30[
 - Prendiamo ora in considerazione quella tecnica che oltre a permetterci di identificare i componenti del microbiota ci permette anche di capire cosa "potenzialmente" possono fare!
 ]
 ---
@@ -712,7 +757,7 @@ knitr::include_graphics("images/metagenomics1.png")
 
 ???
 
-.h201[
+.n30[
 - La metagenomica studia il DNA isolato da un campione ambientale
 
 - Questo campione può essere considerato come un singolo campione e quindi come tale analizzato
@@ -750,7 +795,7 @@ knitr::include_graphics("images/compareBarcodingMetagenome.png")
 
 ???
 
-.h201[
+.n30[
 - La differenza fondamentale tra Metagenomica e Metabarcoding è che per la Metagenomica non serve alcun barcode (marker)
 
 - Questo perchè in metagenomica tutto il DNA presente nel campione viene sequenziato
@@ -801,7 +846,7 @@ knitr::include_graphics("images/CompareHTS.png")
 
 ???
 
-.h201[
+.n30[
 - Consideriamo il range tra il sanger sequencing method e 
 llumina HiSeq
 ]
@@ -814,6 +859,26 @@ llumina HiSeq
 ]
 https://bit.ly/2IGGiJE
 ]
+
+---
+
+.center[
+.middle[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qzusVw4Dp8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+https://bit.ly/3FFx1dM
+]
+
+---
+
+.center[
+.middle[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_lD8JyAbwEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+https://bit.ly/3FFx1dM
+]
+
 ---
 
 .center[.font120[Genomes assembly]]
@@ -826,7 +891,7 @@ knitr::include_graphics("images/Align.png")
 
 ???
 
-.h201[
+.n30[
 - I frammenti generati dal sequenziamento devono poi essere **assemblati** per ricostruire il/i genomi presenti nel campione
 
 - 2 tipi assembli a seconda che sia presente un genoma di riferimento
@@ -861,7 +926,7 @@ knitr::include_graphics("images/metagenomicsPipeline.png")
 
 ???
 
-.h201[
+.n30[
 
 - In questa slide vediamo come facciamo a definire quali sono i potenziali processi del microbiota analizzato
 
@@ -907,7 +972,7 @@ class: inverse, center, middle
 
 ???
 
-.h201[
+.n30[
 - In fine vediamo come studiare le funzioni reali del microbiota
 ]
 ---
@@ -935,7 +1000,7 @@ knitr::include_graphics("images/Meta1.png")
 
 ???
 
-.h201[
+.n30[
 - Fin'ora ci siamo occupati di DNA metabarcoding e Metagenomics
 
 - Abbiamo visto come il DNA Metabercoding risponda alla domanda "Chi è presente?"
@@ -985,7 +1050,7 @@ knitr::include_graphics("images/metatrranscriptomePL.png")
 
 ???
 
-.h201[
+.n30[
 - La metatranscrittomica studia l'espressione genica dei microorganismi nell'ambiente ovvero studia l'**mRNA**
 
 - Essendo una tecnica basata sul sequenziamento permette di ottenere tutti gi mRNA messaggeri presenti nel campione e quindi di avere il profili di espressione dell'ologenoma
@@ -1030,7 +1095,7 @@ knitr::include_graphics("images/metaproteomics.png")
 
 ???
 
-.h201[
+.n30[
 - La Metaproteomica studia le proteine espresse dalla comunità di microorganismi presa in esame
 
 - La proteomics lavora sulle proteine espresse, cioè i veri attori del metabolismo. A differenza di quanto fa la trascrittomica
@@ -1074,7 +1139,7 @@ knitr::include_graphics("images/metabolomics.png")
 
 ???
 
-.h201[
+.n30[
 - La metabolomica è lo studio dei metaboliti
 
 - I metaboliti sono molecole di dimensione inferiore ai 1.5 KDa e rappresentano gli intermedi o i prodotti finali delle reazioni enzimatiche 
@@ -1125,7 +1190,7 @@ knitr::include_graphics("images/sip1.png")
 
 ???
 
-.h201[
+.n30[
 - La Stable isotope probing è una tecnica che utilizzando isotopi radioattivi traccia il flusso dei nutrienti utilizzati dai microorganismi
 
 - Tra i pro di questa tecnica c'è la possibilità di studiare in detttaglio specifiche funzioni della popolazione microbica
@@ -1188,7 +1253,7 @@ knitr::include_graphics("images/sb2.png")
 
 ???
 
-.h201[
+.n30[
 - Qual è la tecnica per studiare al meglio il microbiota?
 
 - La soluzione migliore è usarle tutte e combinarle insieme in quello che viene chiamato System biology
@@ -1211,8 +1276,26 @@ layout: true
 ]
 
 .marco[
-.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3eRDBRL) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
+.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3upNjCt) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
 ]
 ]
+
+---
+
+layout: true
+
+# Feedbacks
+
+
+---
+
+```{r echo=FALSE, out.width = "400px"}
+knitr::include_graphics("images/Lesson1b_feedback.png")
+```
+
+.m0tbp[
+.center[https://bit.ly/2YMlZD3]
+]
+
 
 

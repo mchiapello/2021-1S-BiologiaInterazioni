@@ -21,7 +21,7 @@ output:
 # TO render: rmarkdown::render('Lesson2.Rmd', 'xaringan::moon_reader')
 
 # set working directory to docs folder
-setwd(here::here("docs"))
+setwd(here::here())
 
 # Set global R options
 options(htmltools.dir.version = FALSE, servr.daemon = TRUE)
