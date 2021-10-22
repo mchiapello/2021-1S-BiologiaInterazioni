@@ -69,12 +69,12 @@ class: title-slide
 .marco[
 .tada[Marco Chiapello]
 <br>
-2020-11-24 
+2021-10-20
 ]
 
 
 .marco[
-.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
+.center[.font90[[[`r fontawesome::fa("slack", fill = "steelblue")`](https://join.slack.com/t/ipma-2020/shared_invite/zt-j9o8ig7k-LN1~U3d6QJztquYbC6iW7w) Slack (https://bit.ly/3upNjCt) - `r fontawesome::fa("envelope", fill = "steelblue")`](mailto:marco.chiapello@unito.it) marco.chiapello@unito.it]
 ]
 ]
 
@@ -92,7 +92,8 @@ class: center, middle, clear
 ```{r echo=FALSE, out.width="400px"}
 knitr::include_graphics("images/lesson2quiz.png")
 ```
-.font50[https://bit.ly/39coIbU]
+
+.m0tbp[https://bit.ly/39coIbU]
 
 ---
 layout: true
@@ -192,6 +193,22 @@ class: clear
 
 
 - .font140[Functions of plant-associated microbiomes]
+
+- .font140[Can the plant modify the composition of the associated microbiota?]
+
+- .font140[Can we exploit the microbiota?]
+]
+
+
+---
+layout: false
+class: clear 
+
+.pull-left-wide[
+.font180[.bold[Agenda]]
+
+
+- .font140[**Functions of plant-associated microbiomes**]
 
 - .font140[Can the plant modify the composition of the associated microbiota?]
 
@@ -371,6 +388,9 @@ knitr::include_graphics("images/nutr2.png")
 ???
 
 .h201[
+
+- Importanza del disegno sperimentale 
+
 - model grass Brachypodium distachyon
 
 - inoculum of fresh grassland soil containing whole soil microbial communities that had been exposed to an N enrichment gradient for eight years
@@ -473,81 +493,6 @@ knitr::include_graphics("images/stress1.png")
 
 - Alterando direzione e forza della selezione all'interno delle popolazioni sotto stress
 ]
-
----
-
-.pull-left[
-
-**Responses to drought**
-
-.h201[
-.m0tp[
-
-- `r fontawesome::fa("flask", fill = "grey")` Experiment examines plant adaptation to drought stress in a multigeneration experiment that manipulated aboveground-belowground feedbacks between plants and soil microbial communitie
-
-- Plant fitness in both drought and nondrought environments was linked strongly to the rapid responses of soil microbial community structure to moisture manipulations
-
-- `r fontawesome::fa("arrow-circle-right", fill = "green")` Plants were most fit when their contemporary environmental conditions (wet vs. dry soil) matched the historical environmental conditions (wet vs. dry soil) of their associated microbial community
-
-- Plants may not be limited to "adapt or migrate" strategies
-  
-- `r fontawesome::fa("exclamation-circle", fill = "green")` Plants may benefit from association with interacting species, especially diverse soil microbial communities, that respond rapidly to environmental change
-]
-]
-]
-
-
-.pull-right[
-.m0p[
-```{r echo=FALSE, out.width="400px"}
-knitr::include_graphics("images/stress2.png")
-```
-.right[.font50[`r Cite(bib, key = "Lau_2012")`]]
-
-]]
-
-???
-
-- Brassica rapa
-
----
-
-.pull-left[
-
-**Responses to drought**
-
-.h203[
-.m0tp[
-
-- **How belowground microbial communities do affect plant fitness responses to drought stress?**
-
-- `r fontawesome::fa("exclamation-circle", fill = "green")` Shifts in microbial community composition and bacterial diversity could be linked to changes in biogeochemical processes that influence the availability of resources, such as nitrogen (N), that commonly limit plant growth and fitness.
-
-- `r fontawesome::fa("exclamation-circle", fill = "green")` Given that drought stress altered the composition of both bacterial and fungal communities, drought stress may have changed the relative abundances of mutualists and pathogens and also may have affected the fitness benefits of associating with mutualists and susceptibility to pathogens
-]
-]
-]
-
-
-.pull-right[
-.m0p[
-```{r echo=FALSE, out.width="400px"}
-knitr::include_graphics("images/stress2.png")
-```
-.right[.font50[`r Cite(bib, key = "Lau_2012")`]]
-
-]]
-
-???
-
-.h202[
-
-- I cambiamenti della comunitù microbica possono essere legati a cambiamenti nei processi che influenzano la **biodisponibilitù** delle risorse
-
-- Questi cambiamenti della comunità microbica possono anche cambiare gli equilibri tra l'abbondanza di microorganismi mutualistici e patogeni, favorendo i primi e sfavorendo i secondi
-]
-
-
 
 ---
 
@@ -815,7 +760,7 @@ knitr::include_graphics("images/disease5.png")
 .h201[
 - **Antibiosi**: il batterio colonizza le radici della pianta ospite e impedisce ai patogeni di avvicinarsi alla pianta producendo delle molecole antibiotiche che andranno a localizzarsi attorno alla radice
 
-- **Resistenza sistemi indotta**: alcune molecole possono attivare una risposta sistemica nella poanta che focia nella protezione dell'intera pianta contro le malattie causate da organismi patogeni
+- **Resistenza sistemi indotta**: alcune molecole possono attivare una risposta sistemica nella pianta che focia nella protezione dell'intera pianta contro le malattie causate da organismi patogeni
 
 - **Competizione per i nutrienti**: alcuni microorganismi sono in grado di vincere nella competizione ai nutrienti e quindi occupare più velocemente la nicchia occupata dagli essudati radicali estromettendo dalla corsa peossibili patogeni.
 ]
@@ -1122,6 +1067,14 @@ knitr::include_graphics("images/disease12.png")
 ]
 .right[.font80[`r Cite(bib, key = "Pieterse_2014")`]]
 
+???
+
+.h202[
+- Il priming è un meccanismo che porta a uno stato fisiologico che consente alle piante di rispondere in modo più rapido dopo l'esposizione a stress biotici o abiotici 
+
+- pathogen-induced systemic acquired resistance (SAR), herbivore-induced resistance (HIR), and induced systemic resistance (ISR) triggered by beneficial soilborne microbes.
+]
+
 ---
 
 .pull-left[
@@ -1168,6 +1121,25 @@ knitr::include_graphics("images/disease13.png")
 
 - TSA: tryptic soy agar
 ]
+
+
+---
+
+layout: true
+
+# Feedbacks
+
+
+---
+
+```{r echo=FALSE, out.width = "400px"}
+knitr::include_graphics("images/Lesson2a_feedback.png")
+```
+
+.m0tbp[
+.center[https://bit.ly/3ATqiJS]
+]
+
 
 
 ---
