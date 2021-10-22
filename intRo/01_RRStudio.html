@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Capitolo 1: Introduzione a R e RStudio</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Marco Chiapello" />
+    <meta name="date" content="2021-09-03" />
+    <script src="01_RRStudio_files/header-attrs/header-attrs.js"></script>
+    <link href="01_RRStudio_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="01_RRStudio_files/tile-view/tile-view.js"></script>
+    <script src="01_RRStudio_files/mark.js/mark.min.js"></script>
+    <link href="01_RRStudio_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="01_RRStudio_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":false,"autoSearch":true}) })</script>
+    <link href="01_RRStudio_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="01_RRStudio_files/panelset/panelset.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Capitolo 1: Introduzione a R e RStudio
+### Marco Chiapello
+### 2021-09-03
+
+---
+
+
+
+
+
+
+## Capitolo 1
+
+.pull-left[
+
+- Cos’è R
+
+- Quali sono le potenzialità di R
+ 
+- Cos’è RStudio e perchè usarlo
+ 
+- Come funziona RStudio
+
+]
+
+---
+
+class: center middle inverse
+
+### Cos'è R
+
+----
+
+---
+
+layout: true
+
+# Cos'è R
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+.content-box[The term “R” is used to refer to both the programming language and the software that interprets the scripts written using it]
+
+---
+
+layout: true
+
+# Perchè usare R
+
+---
+
+.content-box[R does not involve lots of pointing and clicking, and that’s a good thing]
+
+---
+
+.content-box[R code is great for reproducibility]
+
+---
+
+.content-box[R is interdisciplinary and extensible]
+
+--
+
+#### Repository principali
+
+- CRAN    
+- Bioconductor    
+- Github
+
+---
+
+.content-box[R works on data of all shapes and sizes]
+
+---
+
+.content-box[R produces high-quality graphics]
+
+---
+
+.content-box[R has a large and welcoming community]
+
+---
+
+.content-box[Not only is R free, but it is also open-source and cross-platform]
+
+
+---
+
+layout: true
+
+# Potenzialità di R
+
+---
+
+class: center middle inverse
+
+----
+
+---
+
+1. .orange[.f40[RIPRODUCIBILITÀ]]
+
+--
+
+1. .f40[Analisi Statistiche]
+
+--
+
+1. .f40[Visualizzazioni grafiche]
+
+--
+
+1. .f40[Creazione di documenti]
+
+--
+
+.ml20[
+.list3[
+- Report statici 
+  - Documenti (pdf, word)     
+  - Presentazioni (powerpoint, html)    
+  - Libri
+
+- Report dinamici    
+  - Documenti (html)    
+  - Siti web    
+
+- Applicazioni
+]]
+
+---
+
+layout: true
+
+# RStudio IDE
+
+---
+
+class: center middle inverse
+
+----
+
+---
+
+
+ RStudio è una azienda che offre diversi prodotti
+
+ A noi interessa particolarmente: 
+
+&gt; RStudio Integrated Development Environment (IDE)
+
+useremo RStudio IDE per scrivere codice, navigare file sul computer, visualizzare le variabili che andremo a create, importare, manipolare ed esportare dati e generare grafici. 
+
+RStudio IDE può fare anche altre cose, come: version control, sviluppare pacchetti, scrivere report interattivi, sviluppare applicazioni Shiny; ma queste non saranno oggetto di questo corso.
+
+---
+
+## WORKING DIRECTORY
+
+1. Che cosa si intende per working directory
+
+1. Come si cambia in RStudio
+
+1. Come organizzare la working directory
+
+---
+
+## Impostare le opzioni
+
+---
+
+## Come interagire con R
+
+---
+
+
+layout: true
+
+# Come cercare aiuto
+
+---
+
+class: center middle inverse
+
+----
+
+---
+
+1. Documentazione di RStudio
+
+1. Chiedere aiuto
+
+   - Colleghi
+
+   - Google
+
+   - Stack Overflow
+
+   - R-help mailing list
+
+   - Reproducible example
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
