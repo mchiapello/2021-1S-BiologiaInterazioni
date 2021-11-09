@@ -21,7 +21,7 @@ output:
 # TO render: rmarkdown::render('Lesson3.Rmd', 'xaringan::moon_reader')
 
 # set working directory to docs folder
-setwd(here::here("docs"))
+setwd(here::here())
 
 # Set global R options
 options(htmltools.dir.version = FALSE, servr.daemon = TRUE)
@@ -65,11 +65,10 @@ class: title-slide
 # .font170[Ecological Significance of Viruses]
 
 
-<br><br>
 .marco[
 .tada[Marco Chiapello]
 <br>
-2020-12-11
+2021-11-10
 ]
 
 <br>
@@ -83,7 +82,6 @@ class: title-slide
 
 .n30[
 
-- Sarò uno dei vostri docenti per il corso "Interazioni tra piante, microrganismi e ambiente"
 ]
 ---
 
@@ -122,8 +120,6 @@ knitr::include_graphics("images/lesson5.png")
 
 1. Microorganisms have a role in cooperative or competitive interactions with other members of the microbiome
 
-1. Eco-evolutionary processes can influence the assembly of plant-associated microbiomes
-
 1. How the microbiota can be exploited
 ]
 ]
@@ -141,8 +137,6 @@ knitr::include_graphics("images/lesson5.png")
 1. .opacity10[Correlation is not causation]
 
 1. .opacity10[Microorganisms have a role in cooperative or competitive interactions with other members of the microbiome]
-
-1. .opacity10[Eco-evolutionary processes can influence the assembly of plant-associated microbiomes]
 
 1. .opacity10[How the microbiota can be exploited]
 ]
@@ -171,8 +165,6 @@ knitr::include_graphics("images/fuctionOverview.png")
 
 1. .opacity10[Microorganisms have a role in cooperative or competitive interactions with other members of the microbiome]
 
-1. .opacity10[Eco-evolutionary processes can influence the assembly of plant-associated microbiomes]
-
 1. .opacity10[How the microbiota can be exploited]
 ]
 ]
@@ -200,8 +192,6 @@ knitr::include_graphics("images/disease2.png")
 
 1. .opacity10[Microorganisms have a role in cooperative or competitive interactions with other members of the microbiome]
 
-1. .opacity10[Eco-evolutionary processes can influence the assembly of plant-associated microbiomes]
-
 1. .opacity10[How the microbiota can be exploited]
 ]
 ]
@@ -227,8 +217,6 @@ knitr::include_graphics("images/disease1.png")
 1. Correlation is not causation
 
 1. .opacity10[Microorganisms have a role in cooperative or competitive interactions with other members of the microbiome]
-
-1. .opacity10[Eco-evolutionary processes can influence the assembly of plant-associated microbiomes]
 
 1. .opacity10[How the microbiota can be exploited]
 ]
@@ -257,8 +245,6 @@ knitr::include_graphics("images/shape5.png")
 
 1. Microorganisms have a role in cooperative or competitive interactions with other members of the microbiome
 
-1. .opacity10[Eco-evolutionary processes can influence the assembly of plant-associated microbiomes]
-
 1. .opacity10[How the microbiota can be exploited]
 ]
 ]
@@ -285,37 +271,6 @@ knitr::include_graphics("images/shape9.png")
 1. .opacity10[Correlation is not causation]
 
 1. .opacity10[Microorganisms have a role in cooperative or competitive interactions with other members of the microbiome]
-
-1. Eco-evolutionary processes can influence the assembly of plant-associated microbiomes
-
-1. .opacity10[How the microbiota can be exploited]
-]
-]
-
-.pull-right[
-<br>
-.m0p[
-```{r echo = FALSE, out.width="280px"}
-knitr::include_graphics("images/ecoevo1.png")
-```
-]
-]
-
----
-
-.pull-left[
-.summaryL3[
-1. .opacity10[The plant-associated microbiome can provide benefits to the plant through various direct or indirect mechanisms]
-
-1. .opacity10[Disease-suppressive soils are exceptional ecosystems in which crop plants suffer less from specific soil-borne pathogens than expected owing to the activities of other soil microorganisms]
-
-1. .opacity10[Induced Systemic Resistance (ISR) is initiated in roots by plant-growth- promoting microbes (PGPM) and leads to resistance priming in distant parts of the plant]
-
-1. .opacity10[Correlation is not causation]
-
-1. .opacity10[Microorganisms have a role in cooperative or competitive interactions with other members of the microbiome]
-
-1. .opacity10[Eco-evolutionary processes can influence the assembly of plant-associated microbiomes]
 
 1. How the microbiota can be exploited
 ]
@@ -349,8 +304,8 @@ class: clear, middle, center
 .m0tbp[
 ```{r echo=FALSE, out.width="950px"}
 # source("extra/virusPoll_auth.R")
-source("extra/virusPoll_plot.R")
-knitr::include_graphics("images/virusPoll.png")
+#source("extra/virusPoll_plot.R")
+knitr::include_graphics("docs/images/virusPoll.png")
 ```
 ]
 
@@ -382,7 +337,7 @@ class: inverse, middle, center
 
 - Dell'herpes non puoi liberarti
 
-- A differenza dell'amore, un herpes virus e per sempre
+- Non è vero che un diamante è per sempre, ma un herpes virus si
 ]
 
 ---
@@ -971,151 +926,7 @@ knitr::include_graphics("images/vir23.png")
 - È stato studiato che il carbonio esportato dalla PB ha effetto sulle concentrazioni di anidride carbonica nell'atmosfera
 ]
 
----
 
-**Viruses manipulate the marine environment**
-.pull-left[
-.m0tp[
-.par25[
-
-- Until now we focused on two areas:
-  - **viruses as pathogens** of aquatic organisms
-  - **virus-driven dynamics** of the marine microbial food web
-
-- Marine viruses can affect their hosts and environments in startling ways:
-  - **Global transfer** of niche adaptation genes
-  - Modifications of the **ontogeny and ecology** of marine organisms
-
-
-**It has become clear that the marine virome is a master of manipulation**
-]
-]
-]
-
-.pull-rigth[
-```{r echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/vir24.png")
-```
-.right[.font50[`r Cite(bib, key = "Rohwer_2009")`]]
-]
-
-???
-
-.h202[
-- Riassumento quanto visto finora, ci siamo concentrati su 2 aree:
-  1. I virus come patogeni
-  1. I virus come componente integrante della nutrizione marina
-
-- I virus possono avere anche altri effetti :
-  1. Il trasferimento di geni all'ospite
-  1. La modificazione dell'ecologia marina
-]
-
----
-
-**Virally encoded host genes**
-.pull-left[
-.m0tp[
-.par25[
-
-- Phage are known to carry and **transfer a variety of host genes**
-
-- Most studies of this phenomenon have focused on the negative effects, but **viral infections can augment the metabolism, immunity, distribution and evolution of their hosts** in many unexpected and potentially positive ways
-
-]
-]
-]
-
-.pull-rigth[
-```{r echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/vir24.png")
-```
-.right[.font50[`r Cite(bib, key = "Rohwer_2009")`]]
-]
-
-???
-
-.h202[
-- I fagi sono noti per avere nel loro genoma geni dell'ospite
-
-- Questi geni possono anche essere trasferiti o espressi dal fago per alterare il metabolismo dell'ospite
-
-- Quasi tutti gli studi su questo fenomeno hanno studiato gli effetti negativi, ma l'infezione virale puà anche avere effetti positivi: come aumentare metabolismo, immunità, distribuzione ed evoluzione dell'ospite in modi inaspettati
-]
-
----
-
-**Virally encoded host genes**
-.pull-left[
-*Accessory gene expression*
-.m0tp[
-.par20[
-
-- Consider the **cyanobacteria**l which together account for about 25% of global photosynthesis
-
-- Sequencing of the marine viral **cyanophage**s that infect these primary producers showed that **genes involved in photosynthesis** are commonly carried in phage genome
-
-- During the lytic cycle, most of the host’s transcription and translation is **shut down by phage**
-
-- By expressing genes involved in photosynthesis, **phage generate the energy necessary for viral production**
-
-]
-]
-]
-
-.pull-rigth[
-```{r echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/vir24.png")
-```
-.right[.font50[`r Cite(bib, key = "Rohwer_2009")`]]
-]
-
-???
-
-.h202[
-- È stato studiato il viroma dei cyano batteri che contribuiscono al 25% della fotosintesi globale
-
-- All'interno dei cyanophagi identificati sono stati trovati geni dell'ospite coinvolti nella fotosintesi
-
-- Durante la fase litica dell'infezione virale, trascrizione e traslazione sono inattivate
-
-- Il virus quindi esprime geni coinvolti nella fotosintesi per aiutare l'ospite a generare l'energia necessaria per la sua replicazione
-]
-
----
-
-**Virally encoded host genes**
-.pull-left[
-*Horizontal gene transfer*
-.m0tp[
-.par20[
-
-- One consequence of cyanophage carrying genes involved in the photosynthesis is the **horizontal gene transfer of photosynthetic genetic elements** between hosts
-
-- Specific ecotypes that live in different parts of the water column and are **tuned to the different light and nutrient regimes**
-
-- Given the prevalence of phage-encoded photosynthesis proteins and the occurrence of recombination between phage and host genes, phage populations are expected to **serve as gene reservoirs**
-
-]
-]
-]
-
-.pull-rigth[
-```{r echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/vir24.png")
-```
-.right[.font50[`r Cite(bib, key = "Rohwer_2009")`]]
-]
-
-???
-
-.h202[
-- Prendiamo nuovamente in considerazione i geni coinvolti nella fotosintesi dei cyanophagi
-
-- Phagi e ospite possono ricombinare e quindi puù avvenire il trasferimento orizzontale di geni
-
-- I phagi possono essere quindi considerati come una riserva di geni per i loro ospiti
-]
 
 ---
 class: clear, middle, center 
@@ -1507,6 +1318,22 @@ layout: true
 ]
 ]
 
+---
+
+layout: true
+
+# Feedbacks
+
+
+---
+
+```{r echo=FALSE, out.width = "400px"}
+knitr::include_graphics("images/LessonVirus.png")
+```
+
+.m0tbp[
+.center[https://bit.ly/3CZJ18t]
+]
 
 
 

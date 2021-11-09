@@ -14,7 +14,7 @@ drive_auth(email = TRUE)
 gs4_auth(token = drive_token())
 
 # Read data
-x <- read_sheet("https://docs.google.com/spreadsheets/d/12QjlSy-v5TaH4gaziJ9SKW1yQM-sIO2z_rcTF3UL61Q/edit#gid=896196830")
+x <- read_sheet("https://docs.google.com/spreadsheets/d/1HLi2VM0WKTYPNgn75lz8bLxS4799usHbdrqj9NR0k1Y/edit?resourcekey#gid=1166058862")
 q <- names(x)[2:7]
 names(x)[2:7] <- LETTERS[1:6]
 
